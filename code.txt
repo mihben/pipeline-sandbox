@@ -8,3 +8,4 @@
 6. Feature -> 1.4.0
 7. Feature! -> 2.0.0
 8. Feature -> 2.1.0
+9. Fix -> 2.1.0
