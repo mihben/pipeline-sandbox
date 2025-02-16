@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/mihben/pipeline-sandbox/compare/v1.3.1...v2.0.0) (2025-02-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **code.txt:** Feature 7 ([#14](https://github.com/mihben/pipeline-sandbox/issues/14))
+
+### Features
+
+* **code.txt:** Feature 6 ([#13](https://github.com/mihben/pipeline-sandbox/issues/13)) ([c9e9997](https://github.com/mihben/pipeline-sandbox/commit/c9e9997260b5b3dc0c75a628eea9ab3c75f872c7))
+* **code.txt:** Feature 7 ([#14](https://github.com/mihben/pipeline-sandbox/issues/14)) ([826e96d](https://github.com/mihben/pipeline-sandbox/commit/826e96d591596ff1c7ce9e9b49a9983d786cac00))
+
+
+### Bug Fixes
+
+* **code.txt:** Fix 2 ([#11](https://github.com/mihben/pipeline-sandbox/issues/11)) ([64dd501](https://github.com/mihben/pipeline-sandbox/commit/64dd501cceaa67d88969db67ec07190a45ce6ab3))
+
 ## [1.3.1](https://github.com/mihben/pipeline-sandbox/compare/v1.3.0...v1.3.1) (2025-02-16)
 
 
