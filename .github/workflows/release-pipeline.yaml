@@ -13,8 +13,8 @@ jobs:
         name: Create Release
         id: version
         with:
-          release-type: simple
           token: ${{ secrets.VERSION_TOKEN }}
+          config-file: ./.github/workflows/release-please-config.json
 
       - name: Publish Package
         if: steps.version.outputs.release_created
