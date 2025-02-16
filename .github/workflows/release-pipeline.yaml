@@ -6,6 +6,9 @@ jobs:
   version:
     runs-on: ubuntu-linux
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - uses: googleapis/release-please-action@v4
         name: Calculate Version
         id: version
