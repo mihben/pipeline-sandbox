@@ -18,7 +18,7 @@ jobs:
         if: ${{ github.event.pull_request.merged }}
         with:
           token: ${{ secrets.VERSION_TOKEN }}
-          config-file: ./.github/workflows/release-please-config.json
+          config-file: .github/workflows/release-please-config.json
 
       - name: Publish Package
         if: ${{ steps.release.outputs.release_created }}
