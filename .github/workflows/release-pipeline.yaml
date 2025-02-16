@@ -12,6 +12,7 @@ jobs:
         with:
           release-type: simple
           token: ${{ secrets.VERSION_TOKEN }}
+          skip-github-pull-request: true
 
       - name: Show Generated Release
         run: "echo ${{ steps.version.outputs.release_created  }}"
