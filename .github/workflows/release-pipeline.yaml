@@ -1,0 +1,18 @@
+name: Release Pipeline
+
+on: workflow_dispatch
+
+jobs:
+  version:
+    runs-on: ubuntu-linux
+    steps:
+      - uses: googleapis/release-please-action@v4
+        name: Calculate Version
+        id: version
+        with:
+          release-type: simple
+          skip-github-release: true
+          skip-github-pull-request: true
+
+      - name: Show Generated Release
+        run: "echo ${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}"
