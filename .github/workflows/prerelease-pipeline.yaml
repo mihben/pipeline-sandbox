@@ -1,0 +1,25 @@
+name: Release Pull Request
+
+on:
+  pull_request:
+    branches: [develop]
+    types: [closed]
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - uses: googleapis/release-please-action@v4
+        name: Create Prerelease
+        id: release
+        if: ${{ github.event.pull_request.merged }}
+        with:
+          token: ${{ secrets.VERSION_TOKEN }}
+          
+
+      - name: Publish Package
+        if: ${{ steps.release.outputs.release_created }}
+        run: echo 'Published ${{steps.release.outputs.major}}.${{steps.release.outputs.minor}}.${{steps.release.outputs.patch}} version'
