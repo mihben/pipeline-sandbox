@@ -1,20 +1,19 @@
-name: Release Pipeline
+name: Release Pull Request
 
 on:
-  push:
-    branches: [develop]
+  pull_request:
+    types: [closed]
+    branches: [develop, main]
 
 jobs:
   version:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
-        name: Calculate Version
+        name: Create/Modify Pull Request
+        if: github.event.pull_request.merged && !contains(github.event.pull_request.labels.*.name, 'autorelease')
         id: version
         with:
           release-type: simple
           token: ${{ secrets.VERSION_TOKEN }}
           skip-github-release: true
-
-      - name: Show Generated Release
-        run: "echo ${{ steps.version.outputs.release_created  }}"
