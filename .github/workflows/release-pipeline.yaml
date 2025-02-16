@@ -18,4 +18,4 @@ jobs:
           skip-github-pull-request: true
 
       - name: Show Generated Release
-        run: "echo ${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}"
+        run: "echo ${{ steps.version.outputs.release_created  }}"
