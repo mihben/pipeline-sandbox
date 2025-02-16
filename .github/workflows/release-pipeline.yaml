@@ -11,7 +11,7 @@ jobs:
         id: version
         with:
           release-type: simple
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.VERSION_TOKEN }}
           skip-github-pull-request: true
 
       - name: Show Generated Release
