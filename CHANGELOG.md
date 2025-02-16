@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/mihben/pipeline-sandbox/compare/v1.2.0...v1.3.0) (2025-02-16)
+
+
+### Features
+
+* **code.txt:** Feature 5 ([#7](https://github.com/mihben/pipeline-sandbox/issues/7)) ([f2874cb](https://github.com/mihben/pipeline-sandbox/commit/f2874cb64837a95240e40d1cd8c980f984f326a4))
+* **release-pipeline:** Added release pipeline ([950a5c4](https://github.com/mihben/pipeline-sandbox/commit/950a5c47cee96c5ece12f3a638221a31b64401a3))
+* **release-pipeline:** Triggered pipeline on push ([ef5a7c0](https://github.com/mihben/pipeline-sandbox/commit/ef5a7c0c9a35871ed137faba9d03dd91fe1ab69a))
+
+
+### Bug Fixes
+
+* **release-pipeline:** Generate pull request on push ([6182a20](https://github.com/mihben/pipeline-sandbox/commit/6182a204f80d50f7251bdcd3e84e4a7ab5de9054))
+
 ## [1.2.0](https://github.com/mihben/pipeline-sandbox/compare/v1.1.0...v1.2.0) (2025-02-16)
 
 
