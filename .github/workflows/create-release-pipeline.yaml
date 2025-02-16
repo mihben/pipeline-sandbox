@@ -1,0 +1,19 @@
+name: Release Pipeline
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        if: ${{ github.event.pull_request.merged }} && contains(github.event.pull_request.labels.*.name, 'autorelease')
+        name: Create Release
+        id: release
+        with:
+          release-type: simple
+          token: ${{ secrets.VERSION_TOKEN }}
+          skip-github-release: false
+          skip-github-pull-request: true
