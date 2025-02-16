@@ -2,7 +2,6 @@ name: Release Pull Request
 
 on:
   pull_request:
-    types: [closed]
     branches: [develop, main]
 
 jobs:
@@ -10,10 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
-        name: Create/Modify Pull Request
-        if: github.event.pull_request.merged && !contains(github.event.pull_request.labels.*.name, 'autorelease')
+        name: Create Release
         id: version
         with:
           release-type: simple
           token: ${{ secrets.VERSION_TOKEN }}
-          skip-github-release: true
+
+      - name: Publish Package
+        if: steps.version.outputs.release_created
+        run: echo 'Published ${{steps.version.outputs.major}}.${{steps.version.outputs.minor}}.${{steps.version.outputs.patch}} version'
