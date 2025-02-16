@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/mihben/pipeline-sandbox/compare/v1.3.0...v1.3.1) (2025-02-16)
+
+
+### Bug Fixes
+
+* **code.txt:** Fix 1 ([#9](https://github.com/mihben/pipeline-sandbox/issues/9)) ([3711448](https://github.com/mihben/pipeline-sandbox/commit/371144863b813e6a3a4f05e85e6583fb68da1b6b))
+
 ## [1.3.0](https://github.com/mihben/pipeline-sandbox/compare/v1.2.0...v1.3.0) (2025-02-16)
 
 
