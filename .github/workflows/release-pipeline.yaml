@@ -14,11 +14,12 @@ jobs:
 
       - uses: googleapis/release-please-action@v4
         name: Create Release
-        id: version
+        id: release
+        if: ${{ github.event.pull_request.merged }}
         with:
           token: ${{ secrets.VERSION_TOKEN }}
           config-file: ./.github/workflows/release-please-config.json
 
       - name: Publish Package
-        if: steps.version.outputs.release_created
-        run: echo 'Published ${{steps.version.outputs.major}}.${{steps.version.outputs.minor}}.${{steps.version.outputs.patch}} version'
+        if: ${{ steps.release.outputs.release_created }}
+        run: echo 'Published ${{steps.release.outputs.major}}.${{steps.release.outputs.minor}}.${{steps.release.outputs.patch}} version'
