@@ -19,6 +19,7 @@ jobs:
         with:
           token: ${{ secrets.VERSION_TOKEN }}
           config-file: .github/workflows/release-please-config.json
+          manifest-file: .github/workflows/release-please-manifest.json
 
       - name: Publish Package
         if: ${{ steps.release.outputs.release_created }}
