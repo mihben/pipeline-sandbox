@@ -16,7 +16,6 @@ jobs:
       - uses: googleapis/release-please-action@v4
         name: Create Prerelease
         id: release
-        if: ${{ github.event.pull_request.merged }}
         with:
           token: ${{ secrets.VERSION_TOKEN }}
           
