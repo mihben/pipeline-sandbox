@@ -1,12 +1,12 @@
 {
-    "prerelease": true,
-    "include-v-in-tag": true,
-    "packages": {
-        ".": {
-            "package-name": "any-app",
-            "component": "any-app",
-            "release-type": "simple"
-        }
-    },
-    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+  "include-v-in-tag": true,
+  "packages": {
+    ".": {
+      "package-name": "ngx-configuration",
+      "release-type": "simple",
+      "prerelease": true,
+      "prerelease-type": "beta"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
