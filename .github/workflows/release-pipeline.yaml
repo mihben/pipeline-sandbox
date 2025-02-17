@@ -2,7 +2,7 @@ name: Release Pull Request
 
 on:
   pull_request:
-    branches: [develop]
+    branches: [main]
     types: [closed]
   workflow_dispatch: 
 
@@ -18,9 +18,9 @@ jobs:
         id: release
         with:
           token: ${{ secrets.VERSION_TOKEN }}
-          config-file: .github/workflows/prerelease-config.json
+          config-file: .github/workflows/release-config.json
           manifest-file: .github/workflows/.release-manifest.json
-          target-branch: develop
+          target-branch: main
           
 
       - name: Publish Package
