@@ -1,6 +1,6 @@
 {
   "include-v-in-tag": true,
-  "type": "prerelease",
+  "versioning": "prerelease",
   "prerelease-type": "beta",
   "packages": {
     ".": {
