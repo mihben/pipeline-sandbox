@@ -4,7 +4,6 @@ on:
   pull_request:
     branches: [develop]
     types: [closed]
-  workflow_dispatch: 
 
 jobs:
   version:
@@ -18,11 +17,10 @@ jobs:
         id: release
         with:
           token: ${{ secrets.VERSION_TOKEN }}
-          config-file: .github/workflows/prerelease-config.json
+          config-file: .github/configurations/prerelease-config.json
           manifest-file: .github/workflows/.release-manifest.json
           target-branch: develop
           
-
       - name: Publish Package
         if: ${{ steps.release.outputs.release_created }}
         run: echo 'Published ${{steps.release.outputs.major}}.${{steps.release.outputs.minor}}.${{steps.release.outputs.patch}} version'
