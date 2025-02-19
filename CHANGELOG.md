@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.0.0-beta.2](https://github.com/mihben/pipeline-sandbox/compare/ngx-configuration-v5.0.0-beta.1...ngx-configuration-v5.0.0-beta.2) (2025-02-19)
+
+
+### Features
+
+* **code.txt:** Feature 15 ([#45](https://github.com/mihben/pipeline-sandbox/issues/45)) ([6485748](https://github.com/mihben/pipeline-sandbox/commit/6485748d6716561b600bbaf2bd3b0f1a75bc98e2))
+* **code.txt:** Feature 17 ([#46](https://github.com/mihben/pipeline-sandbox/issues/46)) ([a67cda4](https://github.com/mihben/pipeline-sandbox/commit/a67cda47ccf0e73035522803bce297ce64578da2))
+
 ## [5.0.0-beta.1](https://github.com/mihben/pipeline-sandbox/compare/ngx-configuration-v5.0.0-beta...ngx-configuration-v5.0.0-beta.1) (2025-02-17)
 
 
