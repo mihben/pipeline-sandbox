@@ -1,4 +1,4 @@
-name: Release Pull Request
+name: Prerelease Pull Request
 
 on:
   pull_request:
@@ -17,8 +17,8 @@ jobs:
         id: release
         with:
           token: ${{ secrets.VERSION_TOKEN }}
-          config-file: .github/configurations/prerelease-config.json
-          manifest-file: .github/workflows/.release-manifest.json
+          config-file: .release/configurations/prerelease-config.json
+          manifest-file: .release/configurations/.release-manifest.json
           target-branch: develop
           
       - name: Publish Package

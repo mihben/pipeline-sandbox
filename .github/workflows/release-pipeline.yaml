@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.VERSION_TOKEN }}
           config-file: .release/configurations/release-config.json
-          manifest-file: .release/workflows/.release-manifest.json
+          manifest-file: .release/configurations/.release-manifest.json
           target-branch: main
           
 
