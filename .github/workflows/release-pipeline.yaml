@@ -18,7 +18,7 @@ jobs:
         id: release
         with:
           token: ${{ secrets.VERSION_TOKEN }}
-          config-file: .github/workflows/release-config.json
+          config-file: .github/configurations/release-config.json
           manifest-file: .github/workflows/.release-manifest.json
           target-branch: main
           
